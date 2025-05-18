@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from models import Notification, UserNotifications
 from services.notification_sender import send_notification_to_queue
-from queue.tasks import get_notifications_for_user
+from notif_queue.tasks import get_notifications_for_user
 
 from pydantic import BaseModel, EmailStr
 
