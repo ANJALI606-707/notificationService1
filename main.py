@@ -22,4 +22,4 @@ def get_user_notifications(user_id: int):
     notifications = get_notifications_for_user(user_id)
     if notifications is None:
         raise HTTPException(status_code=404, detail="User not found")
-    return {"user_id": user_id, "notifications": notifications}
+    return {"user_id": user_id, "notification": notifications}
